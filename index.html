@@ -206,8 +206,9 @@
 
                 <div class="p-6 sm:p-10">
                     <!-- Début Formulaire Netlify -->
-                    <form name="openhouse" method="POST" data-netlify="true" netlify class="space-y-6">
-                        <!-- Champs cachés requis par Netlify -->
+                    <!-- L'attribut 'netlify' permet la détection automatique du formulaire par Netlify -->
+                    <form name="openhouse" method="POST" netlify class="space-y-6">
+                        <!-- Champs cachés requis par Netlify pour identifier le formulaire -->
                         <input type="hidden" name="form-name" value="openhouse" />
                         <input type="hidden" name="creneau" id="selected-creneau" required />
 
@@ -299,9 +300,7 @@
             const errorMsg = document.getElementById('error-msg');
             const form = document.querySelector('form');
 
-            // --- DEBUT MODIFICATION : Gestion du Scroll Fluide ---
-            // On sélectionne tous les liens commençant par # pour garantir un scroll fluide
-            // même si CSS scroll-behavior échoue.
+            // --- Gestion du Scroll Fluide ---
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -314,7 +313,6 @@
                     }
                 });
             });
-            // --- FIN MODIFICATION ---
 
             // Logique de sélection des chips
             slots.forEach(slot => {
