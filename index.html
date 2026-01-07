@@ -206,8 +206,8 @@
 
                 <div class="p-6 sm:p-10">
                     <!-- Début Formulaire Netlify -->
-                    <!-- UTILISATION DE data-netlify="true" POUR UNE DÉTECTION ROBUSTE -->
-                    <form name="openhouse" method="POST" data-netlify="true" class="space-y-6">
+                    <!-- UTILISATION DE data-netlify="true" ET REDIRECTION VERS thank-you.html -->
+                    <form name="openhouse" method="POST" data-netlify="true" action="/thank-you.html" class="space-y-6">
                         <!-- Champ caché name="form-name" obligatoire en premier -->
                         <input type="hidden" name="form-name" value="openhouse" />
                         <input type="hidden" name="creneau" id="selected-creneau" required />

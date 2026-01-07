@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci - Laforêt Saint-Avertin</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuration Tailwind pour Laforêt -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        laforet: {
+                            blue: '#183C89',  /* Bleu Laforêt */
+                            cyan: '#00AFED',  /* Cyan Laforêt */
+                            gray: '#F3F4F6',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col items-center justify-center p-4">
+
+    <!-- Carte de remerciement -->
+    <div class="bg-white rounded-2xl shadow-2xl p-8 sm:p-12 max-w-lg w-full text-center border-t-8 border-laforet-cyan animate-fade-in-up">
+        
+        <!-- Icone Succès -->
+        <div class="w-24 h-24 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-12 h-12 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+        </div>
+
+        <h1 class="font-heading font-extrabold text-3xl sm:text-4xl text-laforet-blue mb-4">
+            Merci !
+        </h1>
+        
+        <p class="font-heading font-semibold text-lg text-gray-700 mb-2">
+            Votre demande a bien été reçue.
+        </p>
+
+        <p class="text-gray-500 text-sm sm:text-base mb-8 leading-relaxed">
+            Nous avons bien pris en compte votre souhait de visite pour l'Open House du <strong>17 Janvier</strong>.<br><br>
+            Un conseiller Laforêt vous rappellera très rapidement pour <strong class="text-laforet-blue">confirmer définitivement</strong> votre créneau horaire.
+        </p>
+
+        <a href="index.html" class="block w-full bg-laforet-blue hover:bg-laforet-blue/90 text-white font-heading font-bold text-lg py-4 rounded-lg shadow-lg transition-transform transform hover:-translate-y-1">
+            Retour à l'accueil
+        </a>
+    </div>
+
+    <!-- Footer minimal -->
+    <footer class="mt-8 text-center text-gray-400 text-xs">
+        &copy; 2025 Laforêt Saint-Avertin. Tous droits réservés.
+    </footer>
+
+</body>
+</html>
