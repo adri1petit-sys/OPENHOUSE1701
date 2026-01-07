@@ -206,9 +206,9 @@
 
                 <div class="p-6 sm:p-10">
                     <!-- Début Formulaire Netlify -->
-                    <!-- L'attribut 'netlify' permet la détection automatique du formulaire par Netlify -->
-                    <form name="openhouse" method="POST" netlify class="space-y-6">
-                        <!-- Champs cachés requis par Netlify pour identifier le formulaire -->
+                    <!-- UTILISATION DE data-netlify="true" POUR UNE DÉTECTION ROBUSTE -->
+                    <form name="openhouse" method="POST" data-netlify="true" class="space-y-6">
+                        <!-- Champ caché name="form-name" obligatoire en premier -->
                         <input type="hidden" name="form-name" value="openhouse" />
                         <input type="hidden" name="creneau" id="selected-creneau" required />
 
